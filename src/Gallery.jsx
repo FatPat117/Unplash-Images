@@ -40,7 +40,14 @@ export default function Gallery() {
         return (
                 <section className="image-container">
                         {results.map((image) => {
-                                return <img src={image?.urls?.regular} alt={image.alt_description} key={image.id} />;
+                                return (
+                                        <img
+                                                src={image?.urls?.regular}
+                                                alt={image.alt_description}
+                                                key={image.id}
+                                                className="img"
+                                        />
+                                );
                         })}
                 </section>
         );
